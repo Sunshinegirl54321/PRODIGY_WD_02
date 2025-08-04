@@ -1,0 +1,172 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.tagline {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+    font-size: 1.1rem;
+}
+.timer-display {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#display {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: white;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    min-width: 100px;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.btn:active {
+    transform: translateY(3px);
+}
+#startBtn {
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    color: white;
+}
+#pauseBtn {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    color: white;
+}
+#resetBtn {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+}
+#lapBtn {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: white;
+}
+.laps-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.laps-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+}
+#laps {
+    list-style: none;
+}
+#laps li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+}
+#laps li:last-child {
+    margin-bottom: 0;
+}
+.no-laps {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    font-style: italic;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    #display {
+        font-size: 3.5rem;
+    }
+    
+    .controls {
+        gap: 10px;
+    }
+    
+    .btn {
+        padding: 10px 15px;
+        font-size: 1rem;
+        min-width: 80px;
+    }
+    
+    .btn span {
+        display: none;
+    }
+}
